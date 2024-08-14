@@ -1,0 +1,34 @@
+{
+    "kind": "Stateful",
+    "definition": {
+        "metadata": {
+            "ExportMetadata": {
+                "ExportCorrelationId": "930e1445-0262-452c-b0aa-00040502f7de",
+                "ExportDate": "2024-08-14T02:29:40"
+            }
+        },
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "contentVersion": "1.0.0.0",
+        "triggers": {
+            "When_a_HTTP_request_is_received": {
+                "type": "Request",
+                "kind": "Http",
+                "inputs": {
+                    "method": "GET"
+                }
+            }
+        },
+        "actions": {
+            "Response": {
+                "type": "Response",
+                "kind": "Http",
+                "inputs": {
+                    "statusCode": 200,
+                    "body": "ok"
+                },
+                "runAfter": {}
+            }
+        },
+        "outputs": {}
+    }
+}
